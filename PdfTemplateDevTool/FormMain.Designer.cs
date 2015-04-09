@@ -1,4 +1,4 @@
-﻿namespace PdfTemplateDevTool
+﻿namespace PdfTemplateTool
 {
     partial class FormMain
     {
@@ -33,16 +33,22 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.openTemplateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveTemplateAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.richTextBoxExtractedText = new System.Windows.Forms.RichTextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.buttonRunTemplate = new System.Windows.Forms.Button();
             this.richTextBoxTemplate = new System.Windows.Forms.RichTextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.richTextBoxResults = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxPath = new System.Windows.Forms.TextBox();
-            this.openTemplateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.buttonRunTemplate = new System.Windows.Forms.Button();
+            this.buttonHelp = new System.Windows.Forms.Button();
+            this.newTemplateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.axAcroPDFViewer)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -75,7 +81,12 @@
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.openToolStripMenuItem,
-            this.openTemplateToolStripMenuItem});
+            this.toolStripSeparator1,
+            this.newTemplateToolStripMenuItem,
+            this.openTemplateToolStripMenuItem,
+            this.saveTemplateAsToolStripMenuItem,
+            this.toolStripSeparator2,
+            this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
@@ -86,6 +97,37 @@
             this.openToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.openToolStripMenuItem.Text = "Open PDF...";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(162, 6);
+            // 
+            // openTemplateToolStripMenuItem
+            // 
+            this.openTemplateToolStripMenuItem.Name = "openTemplateToolStripMenuItem";
+            this.openTemplateToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.openTemplateToolStripMenuItem.Text = "Open Template...";
+            this.openTemplateToolStripMenuItem.Click += new System.EventHandler(this.openTemplateToolStripMenuItem_Click);
+            // 
+            // saveTemplateAsToolStripMenuItem
+            // 
+            this.saveTemplateAsToolStripMenuItem.Name = "saveTemplateAsToolStripMenuItem";
+            this.saveTemplateAsToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.saveTemplateAsToolStripMenuItem.Text = "Save Template...";
+            this.saveTemplateAsToolStripMenuItem.Click += new System.EventHandler(this.saveTemplateAsToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(162, 6);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // groupBox1
             // 
@@ -118,6 +160,7 @@
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.buttonHelp);
             this.groupBox2.Controls.Add(this.buttonRunTemplate);
             this.groupBox2.Controls.Add(this.richTextBoxTemplate);
             this.groupBox2.Location = new System.Drawing.Point(530, 269);
@@ -126,6 +169,17 @@
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Template";
+            // 
+            // buttonRunTemplate
+            // 
+            this.buttonRunTemplate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonRunTemplate.Location = new System.Drawing.Point(697, 200);
+            this.buttonRunTemplate.Name = "buttonRunTemplate";
+            this.buttonRunTemplate.Size = new System.Drawing.Size(75, 23);
+            this.buttonRunTemplate.TabIndex = 1;
+            this.buttonRunTemplate.Text = "Run Template";
+            this.buttonRunTemplate.UseVisualStyleBackColor = true;
+            this.buttonRunTemplate.Click += new System.EventHandler(this.buttonRunTemplate_Click);
             // 
             // richTextBoxTemplate
             // 
@@ -139,6 +193,7 @@
             this.richTextBoxTemplate.TabIndex = 0;
             this.richTextBoxTemplate.Text = "";
             this.richTextBoxTemplate.WordWrap = false;
+            this.richTextBoxTemplate.TextChanged += new System.EventHandler(this.richTextBoxTemplate_TextChanged);
             // 
             // groupBox3
             // 
@@ -171,34 +226,34 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(531, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 13);
+            this.label1.Size = new System.Drawing.Size(53, 13);
             this.label1.TabIndex = 6;
-            this.label1.Text = "Path";
+            this.label1.Text = "PDF Path";
             // 
             // textBoxPath
             // 
-            this.textBoxPath.Location = new System.Drawing.Point(561, 28);
+            this.textBoxPath.Location = new System.Drawing.Point(586, 28);
             this.textBoxPath.Name = "textBoxPath";
             this.textBoxPath.ReadOnly = true;
-            this.textBoxPath.Size = new System.Drawing.Size(747, 20);
+            this.textBoxPath.Size = new System.Drawing.Size(722, 20);
             this.textBoxPath.TabIndex = 7;
             // 
-            // openTemplateToolStripMenuItem
+            // buttonHelp
             // 
-            this.openTemplateToolStripMenuItem.Name = "openTemplateToolStripMenuItem";
-            this.openTemplateToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
-            this.openTemplateToolStripMenuItem.Text = "Open Template...";
+            this.buttonHelp.Location = new System.Drawing.Point(7, 201);
+            this.buttonHelp.Name = "buttonHelp";
+            this.buttonHelp.Size = new System.Drawing.Size(75, 23);
+            this.buttonHelp.TabIndex = 2;
+            this.buttonHelp.Text = "Help";
+            this.buttonHelp.UseVisualStyleBackColor = true;
+            this.buttonHelp.Click += new System.EventHandler(this.buttonHelp_Click);
             // 
-            // buttonRunTemplate
+            // newTemplateToolStripMenuItem
             // 
-            this.buttonRunTemplate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonRunTemplate.Location = new System.Drawing.Point(697, 200);
-            this.buttonRunTemplate.Name = "buttonRunTemplate";
-            this.buttonRunTemplate.Size = new System.Drawing.Size(75, 23);
-            this.buttonRunTemplate.TabIndex = 1;
-            this.buttonRunTemplate.Text = "Run Template";
-            this.buttonRunTemplate.UseVisualStyleBackColor = true;
-            this.buttonRunTemplate.Click += new System.EventHandler(this.buttonRunTemplate_Click);
+            this.newTemplateToolStripMenuItem.Name = "newTemplateToolStripMenuItem";
+            this.newTemplateToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.newTemplateToolStripMenuItem.Text = "New Template";
+            this.newTemplateToolStripMenuItem.Click += new System.EventHandler(this.newTemplateToolStripMenuItem_Click);
             // 
             // FormMain
             // 
@@ -215,6 +270,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormMain";
             this.Text = "PDF Template Tool";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMain_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.axAcroPDFViewer)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -242,6 +298,12 @@
         private System.Windows.Forms.TextBox textBoxPath;
         private System.Windows.Forms.ToolStripMenuItem openTemplateToolStripMenuItem;
         private System.Windows.Forms.Button buttonRunTemplate;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem saveTemplateAsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.Button buttonHelp;
+        private System.Windows.Forms.ToolStripMenuItem newTemplateToolStripMenuItem;
     }
 }
 

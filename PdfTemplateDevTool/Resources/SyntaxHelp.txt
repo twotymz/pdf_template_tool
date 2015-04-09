@@ -1,0 +1,16 @@
+Directives
+-------------------
+path <regex>
+<number> <regex>
+
+Keywords
+-----------------
+headliner
+venue
+date
+time
+section
+row
+seat
+barcode
+confnum
