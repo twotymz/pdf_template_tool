@@ -34,13 +34,12 @@ namespace PdfTemplateTool
         {
             richTextBoxPreText.Text = "";
 
-            Processor processor = new Processor();
-            Template template = new Template();
-            template.SetText("");
-            List<string> pages = processor.ExtractText(pdfPath, template);
+            PdfReader reader = new PdfReader(pdfPath);
 
-            for (int i = 0; i < pages.Count; i++)
+            for (int i = 1; i <= reader.NumberOfPages; ++i)
             {
+                string pdfText = PdfTextExtractor.GetTextFromPage(reader, i);
+
                 if (i > 1)
                 {
                     break;  // Just stop after the first page.
@@ -48,8 +47,7 @@ namespace PdfTemplateTool
                     richTextBoxPreText.AppendText(string.Format("Page {0}\r\n\r\n", i));
                 }
 
-                string[] pdfLines = pages[i].Split('\n');
-
+                string[] pdfLines = pdfText.Split('\n');
                 int k = 0;
                 foreach (string line in pdfLines)
                 {
@@ -57,6 +55,8 @@ namespace PdfTemplateTool
                     ++k;
                 }
             }
+
+            reader.Close();
         }
 
         private void loadTemplate(string path, MessageBoxButtons buttons)
