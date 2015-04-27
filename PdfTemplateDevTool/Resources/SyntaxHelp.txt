@@ -1,10 +1,15 @@
-Directives
--------------------
+
+************************************************
+Text Extraction
+************************************************
 path <regex>
 <number> <regex>
 
-Keywords
------------------
+
+************************************************
+Text Extraction Keywords
+************************************************
+
 headliner
 venue
 date
@@ -14,3 +19,24 @@ row
 seat
 barcode
 confnum
+
+headliner <value>
+venue <value>
+date <value>
+time <value>
+section <value>
+row <value>
+seat <value>
+barcode <value>
+confnum <value>
+
+************************************************
+PDF Preprocessing
+
+Manipulate the PDF prior to text extraction.
+Commands are executed in the order that they are
+specified.
+************************************************
+rotate <degrees>
+save <path>
+

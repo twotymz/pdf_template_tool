@@ -19,39 +19,42 @@ namespace PdfTemplateTool
 {
     public partial class FormMain : Form
     {
-        string[] pdfLines = null;
         string templatePath = null;
         bool templateDirty = false;
 
         public FormMain()
         {
             InitializeComponent();
+
+            editor_context_menu((ToolStripMenuItem)contextMenuStripEditor.Items[0]);
+            editor_context_menu((ToolStripMenuItem)contextMenuStripEditor.Items[1]);
         }
-
-        private void extractText(string path)
+        
+        private void getPreText(string pdfPath)
         {
-            richTextBoxExtractedText.Text = "";
+            richTextBoxPreText.Text = "";
 
-            using (PdfReader reader = new PdfReader(path))
+            Processor processor = new Processor();
+            Template template = new Template();
+            template.SetText("");
+            List<string> pages = processor.ExtractText(pdfPath, template);
+
+            for (int i = 0; i < pages.Count; i++)
             {
-                for (int i = 1; i <= reader.NumberOfPages; i++)
+                if (i > 1)
                 {
-                    if (i > 1)
-                    {
-                        break;  // Just stop after the first page.
-                        richTextBoxExtractedText.AppendText("------------------------------------------------------------------\r\n");
-                        richTextBoxExtractedText.AppendText(string.Format("Page {0}\r\n\r\n", i));
-                    }
+                    break;  // Just stop after the first page.
+                    richTextBoxPreText.AppendText("------------------------------------------------------------------\r\n");
+                    richTextBoxPreText.AppendText(string.Format("Page {0}\r\n\r\n", i));
+                }
 
-                    string text = PdfTextExtractor.GetTextFromPage(reader, i);
-                    pdfLines = text.Split('\n');
+                string[] pdfLines = pages[i].Split('\n');
 
-                    int k = 0;
-                    foreach (string line in pdfLines)
-                    {
-                        richTextBoxExtractedText.AppendText(string.Format("{0,4:G}\t{1}\r\n", k, line));
-                        ++k;
-                    }
+                int k = 0;
+                foreach (string line in pdfLines)
+                {
+                    richTextBoxPreText.AppendText(string.Format("{0,4:G}\t{1}\r\n", k, line));
+                    ++k;
                 }
             }
         }
@@ -63,13 +66,13 @@ namespace PdfTemplateTool
                 return;
             }
 
-            richTextBoxTemplate.Text = "";
+            richTextBoxEditor.Text = "";
             templateDirty = false;
 
             try
             {
                 string text = File.ReadAllText(path);
-                richTextBoxTemplate.Text = text;
+                richTextBoxEditor.Text = text;
                 templateDirty = false;
                 templatePath = path;
                 setTitle();
@@ -82,14 +85,38 @@ namespace PdfTemplateTool
 
         private void processTemplate()
         {
-            if (pdfLines != null)
+            Template template = new Template();
+            template.SetText(richTextBoxEditor.Text);
+
+            Processor processor = new Processor();
+            List<Result> results = processor.ProcessPDF(textBoxPath.Text, template);
+
+            /*
+            richTextBoxPostText.Text = "";          
+            List<string> pages = processor.Pages;
+
+            for (int i = 0; i < pages.Count; i++)
             {
-                Template template = new Template();
-                template.SetText(richTextBoxTemplate.Text);
-                Result result = template.Run(textBoxPath.Text, pdfLines);
-                var json = JsonConvert.SerializeObject(result, Formatting.Indented, new JsonConverter[] { new StringEnumConverter() });
-                richTextBoxResults.Text = json;
+                if (i > 1)
+                {
+                    break;  // Just stop after the first page.
+                    richTextBoxPostText.AppendText("------------------------------------------------------------------\r\n");
+                    richTextBoxPostText.AppendText(string.Format("Page {0}\r\n\r\n", i));
+                }
+
+                string[] pdfLines = pages[i].Split('\n');
+
+                int k = 0;
+                foreach (string line in pdfLines)
+                {
+                    richTextBoxPostText.AppendText(string.Format("{0,4:G}\t{1}\r\n", k, line));
+                    ++k;
+                }
             }
+            */
+
+            var json = JsonConvert.SerializeObject(results[0], Formatting.Indented, new JsonConverter[] { new StringEnumConverter() });
+            richTextBoxResults.Text = json;
         }
 
         private bool checkTemplate(MessageBoxButtons buttons)
@@ -127,7 +154,7 @@ namespace PdfTemplateTool
             {
                 using (StreamWriter sw = new StreamWriter(dialog.FileName))
                 {
-                    sw.Write(richTextBoxTemplate.Text);
+                    sw.Write(richTextBoxEditor.Text);
                 }
                 templateDirty = false;
             }
@@ -157,8 +184,11 @@ namespace PdfTemplateTool
             {
                 axAcroPDFViewer.LoadFile(fileDialog.FileName);
 
-                extractText(fileDialog.FileName);
+                buttonRunTemplate.Enabled = true;
+                trackBarPdfZoom.Enabled = true;
+                trackBarPdfZoom.Value = 50;
                 textBoxPath.Text = fileDialog.FileName;
+                getPreText(fileDialog.FileName);
 
                 string path = Path.GetDirectoryName(fileDialog.FileName) + "\\template.txt";
                 if (File.Exists(path))
@@ -172,7 +202,7 @@ namespace PdfTemplateTool
 
                 checkTemplate(MessageBoxButtons.YesNo);
                 this.Text = "PDF Template Tool";
-                richTextBoxTemplate.Text = "";
+                richTextBoxEditor.Text = "";
                 templateDirty = false;
             }
         }
@@ -216,7 +246,7 @@ namespace PdfTemplateTool
 
             buttonHelp.Enabled = false;
             dialog.FormClosed += helpDialog_Closed;
-            dialog.Show();
+            dialog.Show(this);
         }
 
         private void helpDialog_Closed(object sender, EventArgs e)
@@ -250,9 +280,28 @@ namespace PdfTemplateTool
             }
 
             richTextBoxResults.Text = "";
-            richTextBoxTemplate.Text = "";
+            richTextBoxEditor.Text = "";
             templateDirty = false;
             setTitle();
+        }
+
+        private void trackBarPdfZoom_ValueChanged(object sender, EventArgs e)
+        {
+            axAcroPDFViewer.setZoom(trackBarPdfZoom.Value);
+        }
+
+        private void editor_context_menu(ToolStripMenuItem menu)
+        {
+            foreach (ToolStripItem item in menu.DropDown.Items)
+            {
+                item.Click += editorContextItem_Click;
+            }
+        }
+
+        void editorContextItem_Click(object sender, EventArgs e)
+        {
+            ToolStripItem item = (ToolStripItem)sender;
+            richTextBoxEditor.AppendText((string)item.Tag);
         }
     }
 }
