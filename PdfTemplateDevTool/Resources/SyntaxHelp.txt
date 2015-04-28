@@ -1,42 +1,25 @@
 
-************************************************
-Text Extraction
-************************************************
-path <regex>
-<number> <regex>
+<line_no> regex	# runs regex on the specified line of text in the text buffer
+path regex		# runs regex on the path of the PDF
+headliner value	# sets headliner to value
+venue value		# sets venue to value
+date value		# sets date to value
+time value		# sets time to value
+section value		# sets section to value
+row value		# sets row to value
+seat value		# sets seat to value
+barcode value		# sets barcode to value
+confnum value		# sets confnum to value
 
+dpi x y		# sets the DPI to use when OCR'ing the PDF to make the current bitmap. Default is 300, 300
+rotate 90|180|270	# rotate the current bitmap clockwise by 90, 180, or 270 degrees
+crop x y w h		# crops and sets the current bitmap to a rectange of the current bitmap
+rectangle x y w h	# draws a rectangle in the current bitmap
+greyscale		# converts the current bitmap to greyscale
 
-************************************************
-Text Extraction Keywords
-************************************************
-
-headliner
-venue
-date
-time
-section
-row
-seat
-barcode
-confnum
-
-headliner <value>
-venue <value>
-date <value>
-time <value>
-section <value>
-row <value>
-seat <value>
-barcode <value>
-confnum <value>
-
-************************************************
-PDF Preprocessing
-
-Manipulate the PDF prior to text extraction.
-Commands are executed in the order that they are
-specified.
-************************************************
-rotate <degrees>
-save <path>
+ocr			# OCR the PDF and set the text buffer and the current bitmap
+text			# force the population of the text buffer
+reset			# resets all the values and clears the current bitmap and text buffer
+save_bitmap <path>	# saves the current bitmap to path
+save_text <path>	# saves the current text buffer to path
 

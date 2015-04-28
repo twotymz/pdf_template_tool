@@ -75,6 +75,10 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.trackBarPdfZoom = new System.Windows.Forms.TrackBar();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.richTextBoxExtractedText = new System.Windows.Forms.RichTextBox();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.pictureBoxBitmap = new System.Windows.Forms.PictureBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.menuStripMain.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -85,6 +89,9 @@
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarPdfZoom)).BeginInit();
             this.tabControl1.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBitmap)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -170,7 +177,7 @@
             this.groupBox2.Controls.Add(this.richTextBoxEditor);
             this.groupBox2.Location = new System.Drawing.Point(6, 31);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(658, 530);
+            this.groupBox2.Size = new System.Drawing.Size(662, 530);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Template";
@@ -190,7 +197,7 @@
             // 
             this.buttonRunTemplate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonRunTemplate.Enabled = false;
-            this.buttonRunTemplate.Location = new System.Drawing.Point(573, 500);
+            this.buttonRunTemplate.Location = new System.Drawing.Point(577, 500);
             this.buttonRunTemplate.Name = "buttonRunTemplate";
             this.buttonRunTemplate.Size = new System.Drawing.Size(75, 23);
             this.buttonRunTemplate.TabIndex = 1;
@@ -207,7 +214,7 @@
             this.richTextBoxEditor.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBoxEditor.Location = new System.Drawing.Point(7, 20);
             this.richTextBoxEditor.Name = "richTextBoxEditor";
-            this.richTextBoxEditor.Size = new System.Drawing.Size(641, 474);
+            this.richTextBoxEditor.Size = new System.Drawing.Size(645, 474);
             this.richTextBoxEditor.TabIndex = 0;
             this.richTextBoxEditor.Text = "";
             this.richTextBoxEditor.WordWrap = false;
@@ -241,70 +248,70 @@
             // pathToolStripMenuItem
             // 
             this.pathToolStripMenuItem.Name = "pathToolStripMenuItem";
-            this.pathToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.pathToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.pathToolStripMenuItem.Tag = "path ";
             this.pathToolStripMenuItem.Text = "path";
             // 
             // headlinerToolStripMenuItem1
             // 
             this.headlinerToolStripMenuItem1.Name = "headlinerToolStripMenuItem1";
-            this.headlinerToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.headlinerToolStripMenuItem1.Size = new System.Drawing.Size(123, 22);
             this.headlinerToolStripMenuItem1.Tag = "headliner ";
             this.headlinerToolStripMenuItem1.Text = "headliner";
             // 
             // venueToolStripMenuItem1
             // 
             this.venueToolStripMenuItem1.Name = "venueToolStripMenuItem1";
-            this.venueToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.venueToolStripMenuItem1.Size = new System.Drawing.Size(123, 22);
             this.venueToolStripMenuItem1.Tag = "venue ";
             this.venueToolStripMenuItem1.Text = "venue";
             // 
             // dateToolStripMenuItem1
             // 
             this.dateToolStripMenuItem1.Name = "dateToolStripMenuItem1";
-            this.dateToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.dateToolStripMenuItem1.Size = new System.Drawing.Size(123, 22);
             this.dateToolStripMenuItem1.Tag = "date ";
             this.dateToolStripMenuItem1.Text = "date";
             // 
             // timeToolStripMenuItem1
             // 
             this.timeToolStripMenuItem1.Name = "timeToolStripMenuItem1";
-            this.timeToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.timeToolStripMenuItem1.Size = new System.Drawing.Size(123, 22);
             this.timeToolStripMenuItem1.Tag = "time ";
             this.timeToolStripMenuItem1.Text = "time";
             // 
             // sectionToolStripMenuItem1
             // 
             this.sectionToolStripMenuItem1.Name = "sectionToolStripMenuItem1";
-            this.sectionToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.sectionToolStripMenuItem1.Size = new System.Drawing.Size(123, 22);
             this.sectionToolStripMenuItem1.Tag = "section ";
             this.sectionToolStripMenuItem1.Text = "section";
             // 
             // rowToolStripMenuItem1
             // 
             this.rowToolStripMenuItem1.Name = "rowToolStripMenuItem1";
-            this.rowToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.rowToolStripMenuItem1.Size = new System.Drawing.Size(123, 22);
             this.rowToolStripMenuItem1.Tag = "row ";
             this.rowToolStripMenuItem1.Text = "row";
             // 
             // seatToolStripMenuItem1
             // 
             this.seatToolStripMenuItem1.Name = "seatToolStripMenuItem1";
-            this.seatToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.seatToolStripMenuItem1.Size = new System.Drawing.Size(123, 22);
             this.seatToolStripMenuItem1.Tag = "seat ";
             this.seatToolStripMenuItem1.Text = "seat";
             // 
             // barcodeToolStripMenuItem1
             // 
             this.barcodeToolStripMenuItem1.Name = "barcodeToolStripMenuItem1";
-            this.barcodeToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.barcodeToolStripMenuItem1.Size = new System.Drawing.Size(123, 22);
             this.barcodeToolStripMenuItem1.Tag = "barcode ";
             this.barcodeToolStripMenuItem1.Text = "barcode";
             // 
             // confnumToolStripMenuItem
             // 
             this.confnumToolStripMenuItem.Name = "confnumToolStripMenuItem";
-            this.confnumToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.confnumToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.confnumToolStripMenuItem.Tag = "confnum ";
             this.confnumToolStripMenuItem.Text = "confnum";
             // 
@@ -394,7 +401,7 @@
             this.groupBox3.Controls.Add(this.richTextBoxResults);
             this.groupBox3.Location = new System.Drawing.Point(6, 567);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(658, 185);
+            this.groupBox3.Size = new System.Drawing.Size(662, 185);
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Results";
@@ -408,7 +415,7 @@
             this.richTextBoxResults.Location = new System.Drawing.Point(7, 20);
             this.richTextBoxResults.Name = "richTextBoxResults";
             this.richTextBoxResults.ReadOnly = true;
-            this.richTextBoxResults.Size = new System.Drawing.Size(645, 159);
+            this.richTextBoxResults.Size = new System.Drawing.Size(649, 159);
             this.richTextBoxResults.TabIndex = 0;
             this.richTextBoxResults.Text = "";
             this.richTextBoxResults.WordWrap = false;
@@ -429,7 +436,7 @@
             this.textBoxPath.Location = new System.Drawing.Point(62, 4);
             this.textBoxPath.Name = "textBoxPath";
             this.textBoxPath.ReadOnly = true;
-            this.textBoxPath.Size = new System.Drawing.Size(602, 20);
+            this.textBoxPath.Size = new System.Drawing.Size(606, 20);
             this.textBoxPath.TabIndex = 7;
             // 
             // axAcroPDFViewer
@@ -453,7 +460,7 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(595, 726);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Extracted Text";
+            this.tabPage2.Text = "Text";
             // 
             // richTextBoxPreText
             // 
@@ -503,11 +510,61 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Location = new System.Drawing.Point(3, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(603, 752);
             this.tabControl1.TabIndex = 9;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage3.Controls.Add(this.richTextBoxExtractedText);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(595, 726);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Extracted Text";
+            // 
+            // richTextBoxExtractedText
+            // 
+            this.richTextBoxExtractedText.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBoxExtractedText.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBoxExtractedText.Location = new System.Drawing.Point(6, 6);
+            this.richTextBoxExtractedText.Name = "richTextBoxExtractedText";
+            this.richTextBoxExtractedText.ReadOnly = true;
+            this.richTextBoxExtractedText.Size = new System.Drawing.Size(583, 714);
+            this.richTextBoxExtractedText.TabIndex = 0;
+            this.richTextBoxExtractedText.Text = "";
+            this.richTextBoxExtractedText.WordWrap = false;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage4.Controls.Add(this.pictureBoxBitmap);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(595, 726);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Bitmap";
+            // 
+            // pictureBoxBitmap
+            // 
+            this.pictureBoxBitmap.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBoxBitmap.Location = new System.Drawing.Point(6, 6);
+            this.pictureBoxBitmap.Name = "pictureBoxBitmap";
+            this.pictureBoxBitmap.Size = new System.Drawing.Size(583, 714);
+            this.pictureBoxBitmap.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxBitmap.TabIndex = 2;
+            this.pictureBoxBitmap.TabStop = false;
             // 
             // splitContainer1
             // 
@@ -554,6 +611,9 @@
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarPdfZoom)).EndInit();
             this.tabControl1.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBitmap)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             this.splitContainer1.Panel2.PerformLayout();
@@ -612,6 +672,10 @@
         private System.Windows.Forms.ToolStripMenuItem seatToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem barcodeToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem confnumToolStripMenuItem;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.RichTextBox richTextBoxExtractedText;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.PictureBox pictureBoxBitmap;
     }
 }
 

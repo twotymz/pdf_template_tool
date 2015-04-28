@@ -85,38 +85,32 @@ namespace PdfTemplateTool
 
         private void processTemplate()
         {
+            richTextBoxExtractedText.Text = "";
+            pictureBoxBitmap.Image = null;
+
             Template template = new Template();
             template.SetText(richTextBoxEditor.Text);
 
             Processor processor = new Processor();
-            List<Result> results = processor.ProcessPDF(textBoxPath.Text, template);
+            Result result = processor.ProcessPDF(textBoxPath.Text, template);
+            
+            var json = JsonConvert.SerializeObject(result, Formatting.Indented, new JsonConverter[] { new StringEnumConverter() });
+            richTextBoxResults.Text = json;
 
-            /*
-            richTextBoxPostText.Text = "";          
-            List<string> pages = processor.Pages;
-
-            for (int i = 0; i < pages.Count; i++)
+            if (processor.Text != null)
             {
-                if (i > 1)
-                {
-                    break;  // Just stop after the first page.
-                    richTextBoxPostText.AppendText("------------------------------------------------------------------\r\n");
-                    richTextBoxPostText.AppendText(string.Format("Page {0}\r\n\r\n", i));
-                }
-
-                string[] pdfLines = pages[i].Split('\n');
-
                 int k = 0;
-                foreach (string line in pdfLines)
+                foreach (string line in processor.Text)
                 {
-                    richTextBoxPostText.AppendText(string.Format("{0,4:G}\t{1}\r\n", k, line));
+                    richTextBoxExtractedText.AppendText(string.Format("{0,4:G}\t{1}\r\n", k, line));
                     ++k;
                 }
             }
-            */
 
-            var json = JsonConvert.SerializeObject(results[0], Formatting.Indented, new JsonConverter[] { new StringEnumConverter() });
-            richTextBoxResults.Text = json;
+            if (processor.Bitmap != null)
+            {
+                pictureBoxBitmap.Image = processor.Bitmap;
+            }
         }
 
         private bool checkTemplate(MessageBoxButtons buttons)
