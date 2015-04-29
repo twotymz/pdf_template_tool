@@ -44,27 +44,10 @@
             this.buttonRunTemplate = new System.Windows.Forms.Button();
             this.richTextBoxEditor = new System.Windows.Forms.RichTextBox();
             this.contextMenuStripEditor = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.instructrionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pathToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.headlinerToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.venueToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.dateToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.timeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.sectionToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.rowToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.seatToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.barcodeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.confnumToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.keywordsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.headlinerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.venueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.timeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sectionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.seatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.barcodeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.confirmationNumberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.richTextBoxResults = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -78,6 +61,7 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.richTextBoxExtractedText = new System.Windows.Forms.RichTextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.labelBitmapPosition = new System.Windows.Forms.Label();
             this.pictureBoxBitmap = new System.Windows.Forms.PictureBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.menuStripMain.SuspendLayout();
@@ -177,7 +161,7 @@
             this.groupBox2.Controls.Add(this.richTextBoxEditor);
             this.groupBox2.Location = new System.Drawing.Point(6, 31);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(662, 530);
+            this.groupBox2.Size = new System.Drawing.Size(666, 530);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Template";
@@ -197,7 +181,7 @@
             // 
             this.buttonRunTemplate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonRunTemplate.Enabled = false;
-            this.buttonRunTemplate.Location = new System.Drawing.Point(577, 500);
+            this.buttonRunTemplate.Location = new System.Drawing.Point(581, 500);
             this.buttonRunTemplate.Name = "buttonRunTemplate";
             this.buttonRunTemplate.Size = new System.Drawing.Size(75, 23);
             this.buttonRunTemplate.TabIndex = 1;
@@ -214,7 +198,7 @@
             this.richTextBoxEditor.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBoxEditor.Location = new System.Drawing.Point(7, 20);
             this.richTextBoxEditor.Name = "richTextBoxEditor";
-            this.richTextBoxEditor.Size = new System.Drawing.Size(645, 474);
+            this.richTextBoxEditor.Size = new System.Drawing.Size(649, 474);
             this.richTextBoxEditor.TabIndex = 0;
             this.richTextBoxEditor.Text = "";
             this.richTextBoxEditor.WordWrap = false;
@@ -223,176 +207,40 @@
             // contextMenuStripEditor
             // 
             this.contextMenuStripEditor.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.instructrionsToolStripMenuItem,
-            this.keywordsToolStripMenuItem});
+            this.cutToolStripMenuItem,
+            this.copyToolStripMenuItem,
+            this.pasteToolStripMenuItem,
+            this.deleteToolStripMenuItem});
             this.contextMenuStripEditor.Name = "contextMenuStripEditor";
-            this.contextMenuStripEditor.Size = new System.Drawing.Size(141, 48);
+            this.contextMenuStripEditor.Size = new System.Drawing.Size(108, 92);
             // 
-            // instructrionsToolStripMenuItem
+            // cutToolStripMenuItem
             // 
-            this.instructrionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.pathToolStripMenuItem,
-            this.headlinerToolStripMenuItem1,
-            this.venueToolStripMenuItem1,
-            this.dateToolStripMenuItem1,
-            this.timeToolStripMenuItem1,
-            this.sectionToolStripMenuItem1,
-            this.rowToolStripMenuItem1,
-            this.seatToolStripMenuItem1,
-            this.barcodeToolStripMenuItem1,
-            this.confnumToolStripMenuItem});
-            this.instructrionsToolStripMenuItem.Name = "instructrionsToolStripMenuItem";
-            this.instructrionsToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
-            this.instructrionsToolStripMenuItem.Text = "Instructrions";
+            this.cutToolStripMenuItem.Name = "cutToolStripMenuItem";
+            this.cutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.cutToolStripMenuItem.Text = "Cut";
+            this.cutToolStripMenuItem.Click += new System.EventHandler(this.cutToolStripMenuItem_Click);
             // 
-            // pathToolStripMenuItem
+            // copyToolStripMenuItem
             // 
-            this.pathToolStripMenuItem.Name = "pathToolStripMenuItem";
-            this.pathToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
-            this.pathToolStripMenuItem.Tag = "path ";
-            this.pathToolStripMenuItem.Text = "path";
+            this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
+            this.copyToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.copyToolStripMenuItem.Text = "Copy";
+            this.copyToolStripMenuItem.Click += new System.EventHandler(this.copyToolStripMenuItem_Click);
             // 
-            // headlinerToolStripMenuItem1
+            // pasteToolStripMenuItem
             // 
-            this.headlinerToolStripMenuItem1.Name = "headlinerToolStripMenuItem1";
-            this.headlinerToolStripMenuItem1.Size = new System.Drawing.Size(123, 22);
-            this.headlinerToolStripMenuItem1.Tag = "headliner ";
-            this.headlinerToolStripMenuItem1.Text = "headliner";
+            this.pasteToolStripMenuItem.Name = "pasteToolStripMenuItem";
+            this.pasteToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.pasteToolStripMenuItem.Text = "Paste";
+            this.pasteToolStripMenuItem.Click += new System.EventHandler(this.pasteToolStripMenuItem_Click);
             // 
-            // venueToolStripMenuItem1
+            // deleteToolStripMenuItem
             // 
-            this.venueToolStripMenuItem1.Name = "venueToolStripMenuItem1";
-            this.venueToolStripMenuItem1.Size = new System.Drawing.Size(123, 22);
-            this.venueToolStripMenuItem1.Tag = "venue ";
-            this.venueToolStripMenuItem1.Text = "venue";
-            // 
-            // dateToolStripMenuItem1
-            // 
-            this.dateToolStripMenuItem1.Name = "dateToolStripMenuItem1";
-            this.dateToolStripMenuItem1.Size = new System.Drawing.Size(123, 22);
-            this.dateToolStripMenuItem1.Tag = "date ";
-            this.dateToolStripMenuItem1.Text = "date";
-            // 
-            // timeToolStripMenuItem1
-            // 
-            this.timeToolStripMenuItem1.Name = "timeToolStripMenuItem1";
-            this.timeToolStripMenuItem1.Size = new System.Drawing.Size(123, 22);
-            this.timeToolStripMenuItem1.Tag = "time ";
-            this.timeToolStripMenuItem1.Text = "time";
-            // 
-            // sectionToolStripMenuItem1
-            // 
-            this.sectionToolStripMenuItem1.Name = "sectionToolStripMenuItem1";
-            this.sectionToolStripMenuItem1.Size = new System.Drawing.Size(123, 22);
-            this.sectionToolStripMenuItem1.Tag = "section ";
-            this.sectionToolStripMenuItem1.Text = "section";
-            // 
-            // rowToolStripMenuItem1
-            // 
-            this.rowToolStripMenuItem1.Name = "rowToolStripMenuItem1";
-            this.rowToolStripMenuItem1.Size = new System.Drawing.Size(123, 22);
-            this.rowToolStripMenuItem1.Tag = "row ";
-            this.rowToolStripMenuItem1.Text = "row";
-            // 
-            // seatToolStripMenuItem1
-            // 
-            this.seatToolStripMenuItem1.Name = "seatToolStripMenuItem1";
-            this.seatToolStripMenuItem1.Size = new System.Drawing.Size(123, 22);
-            this.seatToolStripMenuItem1.Tag = "seat ";
-            this.seatToolStripMenuItem1.Text = "seat";
-            // 
-            // barcodeToolStripMenuItem1
-            // 
-            this.barcodeToolStripMenuItem1.Name = "barcodeToolStripMenuItem1";
-            this.barcodeToolStripMenuItem1.Size = new System.Drawing.Size(123, 22);
-            this.barcodeToolStripMenuItem1.Tag = "barcode ";
-            this.barcodeToolStripMenuItem1.Text = "barcode";
-            // 
-            // confnumToolStripMenuItem
-            // 
-            this.confnumToolStripMenuItem.Name = "confnumToolStripMenuItem";
-            this.confnumToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
-            this.confnumToolStripMenuItem.Tag = "confnum ";
-            this.confnumToolStripMenuItem.Text = "confnum";
-            // 
-            // keywordsToolStripMenuItem
-            // 
-            this.keywordsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.headlinerToolStripMenuItem,
-            this.venueToolStripMenuItem,
-            this.dateToolStripMenuItem,
-            this.timeToolStripMenuItem,
-            this.sectionToolStripMenuItem,
-            this.rowToolStripMenuItem,
-            this.seatToolStripMenuItem,
-            this.barcodeToolStripMenuItem,
-            this.confirmationNumberToolStripMenuItem});
-            this.keywordsToolStripMenuItem.Name = "keywordsToolStripMenuItem";
-            this.keywordsToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
-            this.keywordsToolStripMenuItem.Text = "Regex";
-            // 
-            // headlinerToolStripMenuItem
-            // 
-            this.headlinerToolStripMenuItem.Name = "headlinerToolStripMenuItem";
-            this.headlinerToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
-            this.headlinerToolStripMenuItem.Tag = "(?<headliner>)";
-            this.headlinerToolStripMenuItem.Text = "Headliner";
-            // 
-            // venueToolStripMenuItem
-            // 
-            this.venueToolStripMenuItem.Name = "venueToolStripMenuItem";
-            this.venueToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
-            this.venueToolStripMenuItem.Tag = "(?<venue>)";
-            this.venueToolStripMenuItem.Text = "Venue";
-            // 
-            // dateToolStripMenuItem
-            // 
-            this.dateToolStripMenuItem.Name = "dateToolStripMenuItem";
-            this.dateToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
-            this.dateToolStripMenuItem.Tag = "(?<date>)";
-            this.dateToolStripMenuItem.Text = "Date";
-            // 
-            // timeToolStripMenuItem
-            // 
-            this.timeToolStripMenuItem.Name = "timeToolStripMenuItem";
-            this.timeToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
-            this.timeToolStripMenuItem.Tag = "(?<time>)";
-            this.timeToolStripMenuItem.Text = "Time";
-            // 
-            // sectionToolStripMenuItem
-            // 
-            this.sectionToolStripMenuItem.Name = "sectionToolStripMenuItem";
-            this.sectionToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
-            this.sectionToolStripMenuItem.Tag = "(?<section>)";
-            this.sectionToolStripMenuItem.Text = "Section";
-            // 
-            // rowToolStripMenuItem
-            // 
-            this.rowToolStripMenuItem.Name = "rowToolStripMenuItem";
-            this.rowToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
-            this.rowToolStripMenuItem.Tag = "(?<row>)";
-            this.rowToolStripMenuItem.Text = "Row";
-            // 
-            // seatToolStripMenuItem
-            // 
-            this.seatToolStripMenuItem.Name = "seatToolStripMenuItem";
-            this.seatToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
-            this.seatToolStripMenuItem.Tag = "(?<seat>)";
-            this.seatToolStripMenuItem.Text = "Seat";
-            // 
-            // barcodeToolStripMenuItem
-            // 
-            this.barcodeToolStripMenuItem.Name = "barcodeToolStripMenuItem";
-            this.barcodeToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
-            this.barcodeToolStripMenuItem.Tag = "(?<barcode>)";
-            this.barcodeToolStripMenuItem.Text = "Barcode";
-            // 
-            // confirmationNumberToolStripMenuItem
-            // 
-            this.confirmationNumberToolStripMenuItem.Name = "confirmationNumberToolStripMenuItem";
-            this.confirmationNumberToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
-            this.confirmationNumberToolStripMenuItem.Tag = "(?<confnum>)";
-            this.confirmationNumberToolStripMenuItem.Text = "Confirmation Number";
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // groupBox3
             // 
@@ -401,7 +249,7 @@
             this.groupBox3.Controls.Add(this.richTextBoxResults);
             this.groupBox3.Location = new System.Drawing.Point(6, 567);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(662, 185);
+            this.groupBox3.Size = new System.Drawing.Size(666, 185);
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Results";
@@ -415,7 +263,7 @@
             this.richTextBoxResults.Location = new System.Drawing.Point(7, 20);
             this.richTextBoxResults.Name = "richTextBoxResults";
             this.richTextBoxResults.ReadOnly = true;
-            this.richTextBoxResults.Size = new System.Drawing.Size(649, 159);
+            this.richTextBoxResults.Size = new System.Drawing.Size(653, 159);
             this.richTextBoxResults.TabIndex = 0;
             this.richTextBoxResults.Text = "";
             this.richTextBoxResults.WordWrap = false;
@@ -436,7 +284,7 @@
             this.textBoxPath.Location = new System.Drawing.Point(62, 4);
             this.textBoxPath.Name = "textBoxPath";
             this.textBoxPath.ReadOnly = true;
-            this.textBoxPath.Size = new System.Drawing.Size(606, 20);
+            this.textBoxPath.Size = new System.Drawing.Size(610, 20);
             this.textBoxPath.TabIndex = 7;
             // 
             // axAcroPDFViewer
@@ -546,6 +394,7 @@
             // tabPage4
             // 
             this.tabPage4.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage4.Controls.Add(this.labelBitmapPosition);
             this.tabPage4.Controls.Add(this.pictureBoxBitmap);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
@@ -554,6 +403,16 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Bitmap";
             // 
+            // labelBitmapPosition
+            // 
+            this.labelBitmapPosition.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelBitmapPosition.AutoSize = true;
+            this.labelBitmapPosition.Location = new System.Drawing.Point(6, 708);
+            this.labelBitmapPosition.Name = "labelBitmapPosition";
+            this.labelBitmapPosition.Size = new System.Drawing.Size(39, 13);
+            this.labelBitmapPosition.TabIndex = 3;
+            this.labelBitmapPosition.Text = "0, 0 px";
+            // 
             // pictureBoxBitmap
             // 
             this.pictureBoxBitmap.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -561,10 +420,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBoxBitmap.Location = new System.Drawing.Point(6, 6);
             this.pictureBoxBitmap.Name = "pictureBoxBitmap";
-            this.pictureBoxBitmap.Size = new System.Drawing.Size(583, 714);
+            this.pictureBoxBitmap.Size = new System.Drawing.Size(583, 699);
             this.pictureBoxBitmap.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxBitmap.TabIndex = 2;
             this.pictureBoxBitmap.TabStop = false;
+            this.pictureBoxBitmap.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBoxBitmap_MouseClick);
+            this.pictureBoxBitmap.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBoxBitmap_MouseMove);
             // 
             // splitContainer1
             // 
@@ -613,6 +474,7 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBitmap)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -650,32 +512,16 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.TrackBar trackBarPdfZoom;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStripEditor;
-        private System.Windows.Forms.ToolStripMenuItem keywordsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem headlinerToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem venueToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dateToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem timeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem sectionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem rowToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem seatToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem barcodeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem confirmationNumberToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem instructrionsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem pathToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem headlinerToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem venueToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem dateToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem timeToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem sectionToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem rowToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem seatToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem barcodeToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem confnumToolStripMenuItem;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.RichTextBox richTextBoxExtractedText;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.PictureBox pictureBoxBitmap;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStripEditor;
+        private System.Windows.Forms.ToolStripMenuItem cutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem copyToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pasteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
+        private System.Windows.Forms.Label labelBitmapPosition;
     }
 }
 

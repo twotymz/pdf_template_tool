@@ -22,13 +22,15 @@ namespace PdfTemplateTool
         string templatePath = null;
         bool templateDirty = false;
         Bitmap processorBitmap = null;
+        int startX = 0;
+        int startY = 0;
+        int endX = 0;
+        int endY = 0;
+        int mouseClick = 0;
 
         public FormMain()
         {
             InitializeComponent();
-
-            editor_context_menu((ToolStripMenuItem)contextMenuStripEditor.Items[0]);
-            editor_context_menu((ToolStripMenuItem)contextMenuStripEditor.Items[1]);
         }
         
         private void getPreText(string pdfPath)
@@ -86,7 +88,8 @@ namespace PdfTemplateTool
 
         private void processTemplate()
         {
-            richTextBoxResults.Text = "";
+            mouseClick = 0;
+            richTextBoxResults.Text = "";           
             richTextBoxExtractedText.Text = "";
             pictureBoxBitmap.Image = null;
 
@@ -115,7 +118,7 @@ namespace PdfTemplateTool
                 {
                     processorBitmap.Dispose();
                 }
-                processorBitmap = processor.Bitmap;
+                processorBitmap = new Bitmap(processor.Bitmap);
                 pictureBoxBitmap.Image = processorBitmap;
             }
         }
@@ -181,7 +184,7 @@ namespace PdfTemplateTool
 
             fileDialog.Filter = "PDF files (*.pdf)|*.pdf";
             
-            if (fileDialog.ShowDialog() == DialogResult.OK)
+            if (fileDialog.ShowDialog(this) == DialogResult.OK)
             {
                 axAcroPDFViewer.LoadFile(fileDialog.FileName);
 
@@ -194,7 +197,7 @@ namespace PdfTemplateTool
                 string path = Path.GetDirectoryName(fileDialog.FileName) + "\\template.txt";
                 if (File.Exists(path))
                 {
-                    if (MessageBox.Show("Open template.txt from the same directory?", "Open Template", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    if (MessageBox.Show(this, "Open template.txt from the same directory?", "Open Template", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
                         loadTemplate(path, MessageBoxButtons.YesNo);
                         return;
@@ -214,7 +217,7 @@ namespace PdfTemplateTool
 
             fileDialog.Filter = "Template files (*.txt)|*.txt";
 
-            if (fileDialog.ShowDialog() == DialogResult.OK)
+            if (fileDialog.ShowDialog(this) == DialogResult.OK)
             {
                 loadTemplate(fileDialog.FileName, MessageBoxButtons.YesNoCancel);
             }
@@ -291,18 +294,107 @@ namespace PdfTemplateTool
             axAcroPDFViewer.setZoom(trackBarPdfZoom.Value);
         }
 
-        private void editor_context_menu(ToolStripMenuItem menu)
+        private void cutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            foreach (ToolStripItem item in menu.DropDown.Items)
-            {
-                item.Click += editorContextItem_Click;
-            }
+            richTextBoxEditor.Cut();
         }
 
-        void editorContextItem_Click(object sender, EventArgs e)
+        private void copyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ToolStripItem item = (ToolStripItem)sender;
-            richTextBoxEditor.AppendText((string)item.Tag);
+            richTextBoxEditor.Copy();
+        }
+
+        private void pasteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBoxEditor.Paste();
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBoxEditor.SelectedText = "";
+        }
+
+        private void pictureBoxBitmap_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (processorBitmap != null) 
+            {
+                float xPercent = e.X / (float)pictureBoxBitmap.Width;
+                float yPercent = e.Y / (float)pictureBoxBitmap.Height;
+                int currentX = Math.Min((int)(xPercent * processorBitmap.Width + 0.5f), processorBitmap.Width);
+                int currentY = Math.Min((int)(yPercent * processorBitmap.Height + 0.5f), processorBitmap.Height);
+
+                switch (mouseClick)
+                {
+                    case 0 :
+                        labelBitmapPosition.Text = string.Format("{0}, {1} px", currentX, currentY);
+                        break;
+
+                    case 1 :
+                        {
+                            xPercent = startX / (float)pictureBoxBitmap.Width;
+                            yPercent = startY / (float)pictureBoxBitmap.Height;
+                            int anchorX = Math.Min((int)(xPercent * processorBitmap.Width + 0.5f), processorBitmap.Width);
+                            int anchorY = Math.Min((int)(yPercent * processorBitmap.Height + 0.5f), processorBitmap.Height);
+
+                            xPercent = e.X / (float)pictureBoxBitmap.Width;
+                            yPercent = e.Y / (float)pictureBoxBitmap.Height;
+                            int lastX = Math.Min((int)(xPercent * processorBitmap.Width + 0.5f), processorBitmap.Width);
+                            int lastY = Math.Min((int)(yPercent * processorBitmap.Height + 0.5f), processorBitmap.Height);
+
+                            labelBitmapPosition.Text = string.Format("{0}, {1} px ({2}, {3} px, {4}, {5})",
+                                                                     currentX,
+                                                                     currentY,
+                                                                     anchorX,
+                                                                     anchorY,
+                                                                     Math.Abs(lastX - anchorX),
+                                                                     Math.Abs(lastY - anchorY));
+                        }
+                        break;
+
+                    case 2 :
+                        {
+                            xPercent = startX / (float)pictureBoxBitmap.Width;
+                            yPercent = startY / (float)pictureBoxBitmap.Height;
+                            int anchorX = Math.Min((int)(xPercent * processorBitmap.Width + 0.5f), processorBitmap.Width);
+                            int anchorY = Math.Min((int)(yPercent * processorBitmap.Height + 0.5f), processorBitmap.Height);
+
+                            xPercent = endX / (float)pictureBoxBitmap.Width;
+                            yPercent = endY / (float)pictureBoxBitmap.Height;
+                            int lastX = Math.Min((int)(xPercent * processorBitmap.Width + 0.5f), processorBitmap.Width);
+                            int lastY = Math.Min((int)(yPercent * processorBitmap.Height + 0.5f), processorBitmap.Height);
+
+                            labelBitmapPosition.Text = string.Format("{0}, {1} px ({2}, {3} px, {4}, {5})", 
+                                                                     currentX,
+                                                                     currentY, 
+                                                                     anchorX, 
+                                                                     anchorY, 
+                                                                     Math.Abs(lastX - anchorX),
+                                                                     Math.Abs(lastY - anchorY));
+                        }
+                        break;
+                }
+            }
+        }
+       
+
+        private void pictureBoxBitmap_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (processorBitmap != null)
+            {
+                switch (mouseClick)
+                {
+                    case 0 :
+                        startX = e.X;
+                        startY = e.Y;
+                        break;
+                    case 1 :
+                        endX = e.X;
+                        endY = e.Y;
+                        break;
+                }
+
+                mouseClick = (mouseClick + 1) % 3;
+            }
         }
     }
 }
