@@ -21,6 +21,7 @@ namespace PdfTemplateTool
     {
         string templatePath = null;
         bool templateDirty = false;
+        Bitmap processorBitmap = null;
 
         public FormMain()
         {
@@ -85,6 +86,7 @@ namespace PdfTemplateTool
 
         private void processTemplate()
         {
+            richTextBoxResults.Text = "";
             richTextBoxExtractedText.Text = "";
             pictureBoxBitmap.Image = null;
 
@@ -109,7 +111,12 @@ namespace PdfTemplateTool
 
             if (processor.Bitmap != null)
             {
-                pictureBoxBitmap.Image = processor.Bitmap;
+                if (processorBitmap != null)
+                {
+                    processorBitmap.Dispose();
+                }
+                processorBitmap = processor.Bitmap;
+                pictureBoxBitmap.Image = processorBitmap;
             }
         }
 
