@@ -93,33 +93,35 @@ namespace PdfTemplateTool
             richTextBoxExtractedText.Text = "";
             pictureBoxBitmap.Image = null;
 
-            Template template = new Template();
-            template.SetText(richTextBoxEditor.Text);
-
-            Processor processor = new Processor();
-            Result result = processor.ProcessPDF(textBoxPath.Text, template);
-            
-            var json = JsonConvert.SerializeObject(result, Formatting.Indented, new JsonConverter[] { new StringEnumConverter() });
-            richTextBoxResults.Text = json;
-
-            if (processor.Text != null)
+            using (Processor processor = new Processor())
             {
-                int k = 0;
-                foreach (string line in processor.Text)
-                {
-                    richTextBoxExtractedText.AppendText(string.Format("{0,4:G}\t{1}\r\n", k, line));
-                    ++k;
-                }
-            }
+                Template template = new Template();
+                template.SetText(richTextBoxEditor.Text);
+                Result result = processor.ProcessPDF(textBoxPath.Text, template);
 
-            if (processor.Bitmap != null)
-            {
-                if (processorBitmap != null)
+                var json = JsonConvert.SerializeObject(result, Formatting.Indented, new JsonConverter[] { new StringEnumConverter() });
+                richTextBoxResults.Text = json;
+
+                if (processor.Text != null)
                 {
-                    processorBitmap.Dispose();
+                    int k = 0;
+                    foreach (string line in processor.Text)
+                    {
+                        richTextBoxExtractedText.AppendText(string.Format("{0,4:G}\t{1}\r\n", k, line));
+                        ++k;
+                    }
                 }
-                processorBitmap = new Bitmap(processor.Bitmap);
-                pictureBoxBitmap.Image = processorBitmap;
+
+                if (processor.Bitmap != null)
+                {
+                    if (processorBitmap != null)
+                    {
+                        processorBitmap.Dispose();
+                    }
+                    processorBitmap = new Bitmap(processor.Bitmap);
+                    pictureBoxBitmap.Image = processorBitmap;
+                }
+
             }
         }
 
