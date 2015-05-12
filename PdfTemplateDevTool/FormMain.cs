@@ -31,6 +31,7 @@ namespace PdfTemplateTool
         public FormMain()
         {
             InitializeComponent();
+            loadMacros();
         }
         
         private void getPreText(string pdfPath)
@@ -178,6 +179,43 @@ namespace PdfTemplateTool
                 text += " [modified]";
             }
             this.Text = string.Format("{0} - PDF Template Tool", text);
+        }
+
+        private void loadMacros ()
+        {
+            string macroPath = Path.Combine(Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location), "macros");
+            string[] files = Directory.GetFiles(macroPath);
+
+            Array.Sort<string>(files);
+
+            foreach (string file in files)
+            {
+                string extension = Path.GetExtension(file);
+                if (extension == ".txt")
+                {
+                    ToolStripMenuItem item = new ToolStripMenuItem();
+                    string filename = Path.GetFileName(file);
+                    item.Text = filename.Substring(0, filename.Length - extension.Length);
+                    item.Tag = file;
+                    item.Click += macro_Click;
+                    macrosToolStripMenuItem.DropDown.Items.Add(item);
+                }
+            }
+
+            if (files.Length == 0)
+            {
+                ToolStripMenuItem item = new ToolStripMenuItem();
+                item.Enabled = false;
+                item.Text = "No macros";
+                macrosToolStripMenuItem.DropDown.Items.Add(item);
+            }
+        }
+
+        private void macro_Click(object sender, EventArgs e)
+        {
+            ToolStripMenuItem item = (ToolStripMenuItem)sender;
+            string text = System.IO.File.ReadAllText((string)item.Tag);
+            richTextBoxEditor.AppendText(text + '\n');
         }
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)

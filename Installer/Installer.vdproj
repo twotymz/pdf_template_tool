@@ -34,7 +34,49 @@
         "Entry"
         {
         "MsmKey" = "8:_0B6EAD88264DDD5649B3211A9E03EA8B"
-        "OwnerKey" = "8:_925B52AECCE6D981FB6925EC5F979801"
+        "OwnerKey" = "8:_A98C61CFEC7563BC77B8768137BBC736"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_0C48238B8E87458BBB98CB73961E4317"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_0E17008C655247A28734466A18C9A224"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_1889504E733E4ED08044203047B025F6"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_1CE0485B157347A68DA497B36B17E088"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_4707A5EDCBAC419AB6DB7A021594D052"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_4B92E0631B6F4E58AB0D1E33D2B11BF0"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_5B4BB5AF46364942BDC6AB1C729317D9"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -51,8 +93,80 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_925B52AECCE6D981FB6925EC5F979801"
+        "MsmKey" = "8:_8EACFF07C39CAFEEA4FCE8027D508214"
+        "OwnerKey" = "8:_A98C61CFEC7563BC77B8768137BBC736"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_8EACFF07C39CAFEEA4FCE8027D508214"
         "OwnerKey" = "8:_F42066563B1B43C9A293B7E857AEA574"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_A316CAEED604464396E378D3C42D38FC"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_A3EC1D7D3EA1403BA136DAE3F2319063"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_A486BFADA1A9159733F1ADFFDDC6282E"
+        "OwnerKey" = "8:_F42066563B1B43C9A293B7E857AEA574"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_A486BFADA1A9159733F1ADFFDDC6282E"
+        "OwnerKey" = "8:_A98C61CFEC7563BC77B8768137BBC736"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_A98C61CFEC7563BC77B8768137BBC736"
+        "OwnerKey" = "8:_F42066563B1B43C9A293B7E857AEA574"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_BEC201DC636D413ABBA041E08DDC8D9F"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_C1ABA5FEDB974B63A5CFEF4027793322"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_C2E1A4921F114A3EAEC29A3769F655BB"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_CB7A8F7F2AE148C9A9C1BA7CE30B111C"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_E2E916BC8C0B490FA5610C2BFD77F144"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_F30666D5D09241D59A217E905FB0CC08"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -70,25 +184,19 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_0B6EAD88264DDD5649B3211A9E03EA8B"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_925B52AECCE6D981FB6925EC5F979801"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_F42066563B1B43C9A293B7E857AEA574"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_F53AE052D48552C2876B7143C2C1DFEE"
+        "OwnerKey" = "8:_0B6EAD88264DDD5649B3211A9E03EA8B"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_876C727244B9A8E3097CAFD9ABCE336A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -100,7 +208,25 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_876C727244B9A8E3097CAFD9ABCE336A"
+        "OwnerKey" = "8:_F53AE052D48552C2876B7143C2C1DFEE"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_A486BFADA1A9159733F1ADFFDDC6282E"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_8EACFF07C39CAFEEA4FCE8027D508214"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_A98C61CFEC7563BC77B8768137BBC736"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -121,6 +247,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.5"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.5 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.5"
+                    }
+                }
+            }
         }
         "Release"
         {
@@ -137,6 +279,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.5"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.5 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.5"
+                    }
+                }
+            }
         }
     }
     "Deployable"
@@ -173,11 +331,6 @@
             "AssemblyAsmDisplayName" = "8:Interop.AcroPDFLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_017BBE19636D42BBF2900E9FC0B2B1A2"
-                    {
-                    "Name" = "8:Interop.AcroPDFLib.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Interop.AcroPDFLib.dll"
             "TargetName" = "8:"
@@ -204,11 +357,6 @@
             "AssemblyAsmDisplayName" = "8:itextsharp, Version=5.5.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_0B6EAD88264DDD5649B3211A9E03EA8B"
-                    {
-                    "Name" = "8:itextsharp.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:itextsharp.dll"
             "TargetName" = "8:"
@@ -226,6 +374,146 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0C48238B8E87458BBB98CB73961E4317"
+            {
+            "SourcePath" = "8:..\\..\\PdfTemplateLib\\PdfTemplateLib\\x64\\libtesseract302.dll"
+            "TargetName" = "8:libtesseract302.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_020C54275B58414496E13937C0DF1C26"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0E17008C655247A28734466A18C9A224"
+            {
+            "SourcePath" = "8:..\\..\\PdfTemplateLib\\PdfTemplateLib\\tessdata\\eng.cube.size"
+            "TargetName" = "8:eng.cube.size"
+            "Tag" = "8:"
+            "Folder" = "8:_5FB09F8E250043EFB6A834E324FF3328"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1889504E733E4ED08044203047B025F6"
+            {
+            "SourcePath" = "8:..\\..\\PdfTemplateLib\\PdfTemplateLib\\x64\\liblept168.dll"
+            "TargetName" = "8:liblept168.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_020C54275B58414496E13937C0DF1C26"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1CE0485B157347A68DA497B36B17E088"
+            {
+            "SourcePath" = "8:..\\..\\PdfTemplateLib\\PdfTemplateLib\\tessdata\\eng.cube.lm"
+            "TargetName" = "8:eng.cube.lm"
+            "Tag" = "8:"
+            "Folder" = "8:_5FB09F8E250043EFB6A834E324FF3328"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4707A5EDCBAC419AB6DB7A021594D052"
+            {
+            "SourcePath" = "8:..\\..\\PdfTemplateLib\\PdfTemplateLib\\tessdata\\eng.cube.word-freq"
+            "TargetName" = "8:eng.cube.word-freq"
+            "Tag" = "8:"
+            "Folder" = "8:_5FB09F8E250043EFB6A834E324FF3328"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4B92E0631B6F4E58AB0D1E33D2B11BF0"
+            {
+            "SourcePath" = "8:..\\..\\PdfTemplateLib\\PdfTemplateLib\\tessdata\\eng.traineddata"
+            "TargetName" = "8:eng.traineddata"
+            "Tag" = "8:"
+            "Folder" = "8:_5FB09F8E250043EFB6A834E324FF3328"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5B4BB5AF46364942BDC6AB1C729317D9"
+            {
+            "SourcePath" = "8:..\\..\\PdfTemplateLib\\PdfTemplateLib\\bin\\Release\\x86\\liblept168.dll"
+            "TargetName" = "8:liblept168.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_DE605CD69F244439A4AD77B15631E4E6"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_68E4E4BB213959BF6947B48D366375A5"
@@ -255,11 +543,6 @@
             "AssemblyAsmDisplayName" = "8:Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_876C727244B9A8E3097CAFD9ABCE336A"
-                    {
-                    "Name" = "8:Newtonsoft.Json.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Newtonsoft.Json.dll"
             "TargetName" = "8:"
@@ -279,18 +562,105 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_925B52AECCE6D981FB6925EC5F979801"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_8EACFF07C39CAFEEA4FCE8027D508214"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Tesseract, Version=2.3.0.0, Culture=neutral, PublicKeyToken=ebeb3d86bef60cbe, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                }
+            "SourcePath" = "8:Tesseract.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_F5A09025D7A942F1A3AADDCFBF11D2F5"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A316CAEED604464396E378D3C42D38FC"
+            {
+            "SourcePath" = "8:..\\..\\PdfTemplateLib\\PdfTemplateLib\\tessdata\\eng.tesseract_cube.nn"
+            "TargetName" = "8:eng.tesseract_cube.nn"
+            "Tag" = "8:"
+            "Folder" = "8:_5FB09F8E250043EFB6A834E324FF3328"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A3EC1D7D3EA1403BA136DAE3F2319063"
+            {
+            "SourcePath" = "8:..\\PdfTemplateDevTool\\macros\\path.txt"
+            "TargetName" = "8:path.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_77A635D42BAC4A58BEBC409DF63A42D1"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_A486BFADA1A9159733F1ADFFDDC6282E"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Ghostscript.NET, Version=1.2.0.0, Culture=neutral, PublicKeyToken=f85051de34525b59, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                }
+            "SourcePath" = "8:Ghostscript.NET.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_F5A09025D7A942F1A3AADDCFBF11D2F5"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_A98C61CFEC7563BC77B8768137BBC736"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:PdfTemplateLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_925B52AECCE6D981FB6925EC5F979801"
-                    {
-                    "Name" = "8:PdfTemplateLib.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:PdfTemplateLib.dll"
             "TargetName" = "8:"
@@ -310,6 +680,126 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BEC201DC636D413ABBA041E08DDC8D9F"
+            {
+            "SourcePath" = "8:..\\..\\PdfTemplateLib\\PdfTemplateLib\\tessdata\\eng.cube.params"
+            "TargetName" = "8:eng.cube.params"
+            "Tag" = "8:"
+            "Folder" = "8:_5FB09F8E250043EFB6A834E324FF3328"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C1ABA5FEDB974B63A5CFEF4027793322"
+            {
+            "SourcePath" = "8:..\\PdfTemplateDevTool\\macros\\axs barcode.txt"
+            "TargetName" = "8:axs barcode.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_77A635D42BAC4A58BEBC409DF63A42D1"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C2E1A4921F114A3EAEC29A3769F655BB"
+            {
+            "SourcePath" = "8:..\\..\\PdfTemplateLib\\PdfTemplateLib\\tessdata\\eng.cube.nn"
+            "TargetName" = "8:eng.cube.nn"
+            "Tag" = "8:"
+            "Folder" = "8:_5FB09F8E250043EFB6A834E324FF3328"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CB7A8F7F2AE148C9A9C1BA7CE30B111C"
+            {
+            "SourcePath" = "8:..\\..\\PdfTemplateLib\\PdfTemplateLib\\bin\\Release\\x86\\libtesseract302.dll"
+            "TargetName" = "8:libtesseract302.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_DE605CD69F244439A4AD77B15631E4E6"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E2E916BC8C0B490FA5610C2BFD77F144"
+            {
+            "SourcePath" = "8:..\\..\\PdfTemplateLib\\PdfTemplateLib\\tessdata\\eng.cube.bigrams"
+            "TargetName" = "8:eng.cube.bigrams"
+            "Tag" = "8:"
+            "Folder" = "8:_5FB09F8E250043EFB6A834E324FF3328"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F30666D5D09241D59A217E905FB0CC08"
+            {
+            "SourcePath" = "8:..\\..\\PdfTemplateLib\\PdfTemplateLib\\tessdata\\eng.cube.fold"
+            "TargetName" = "8:eng.cube.fold"
+            "Tag" = "8:"
+            "Folder" = "8:_5FB09F8E250043EFB6A834E324FF3328"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_F53AE052D48552C2876B7143C2C1DFEE"
             {
             "AssemblyRegister" = "3:1"
@@ -317,11 +807,6 @@
             "AssemblyAsmDisplayName" = "8:AxInterop.AcroPDFLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_F53AE052D48552C2876B7143C2C1DFEE"
-                    {
-                    "Name" = "8:AxInterop.AcroPDFLib.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:AxInterop.AcroPDFLib.dll"
             "TargetName" = "8:"
@@ -379,6 +864,50 @@
             "Property" = "8:TARGETDIR"
                 "Folders"
                 {
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_020C54275B58414496E13937C0DF1C26"
+                    {
+                    "Name" = "8:x64"
+                    "AlwaysCreate" = "11:FALSE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_B39A8CA77AE440E6A82E2D77FD1A8ECF"
+                        "Folders"
+                        {
+                        }
+                    }
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_5FB09F8E250043EFB6A834E324FF3328"
+                    {
+                    "Name" = "8:tessdata"
+                    "AlwaysCreate" = "11:FALSE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_53A412DB3B214B7EBA68E32532803C7E"
+                        "Folders"
+                        {
+                        }
+                    }
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_77A635D42BAC4A58BEBC409DF63A42D1"
+                    {
+                    "Name" = "8:macros"
+                    "AlwaysCreate" = "11:FALSE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_94A92937606E45B5B71DCEE2EBCEDD23"
+                        "Folders"
+                        {
+                        }
+                    }
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_DE605CD69F244439A4AD77B15631E4E6"
+                    {
+                    "Name" = "8:x86"
+                    "AlwaysCreate" = "11:FALSE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_09E3BA5D190045CEA13662041BBEBFD7"
+                        "Folders"
+                        {
+                        }
+                    }
                 }
             }
         }
@@ -398,7 +927,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:PDF Template Tool"
         "ProductCode" = "8:{6E3496E3-01AD-4C61-BCE8-F2E9377ADECA}"
-        "PackageCode" = "8:{F0FEC5B7-3D9E-45DD-B768-8533F2537C68}"
+        "PackageCode" = "8:{CACFCE62-AEB5-4765-B5DB-ACB12617DC44}"
         "UpgradeCode" = "8:{729D6CBA-5059-404D-A481-C7E491865390}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -520,7 +1049,7 @@
         {
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_59C8323B004E4E9BBC41D4AC12824F1A"
             {
-            "Name" = "8:DTI PDF Template Tool"
+            "Name" = "8:PDF Template Tool"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
@@ -534,7 +1063,7 @@
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_DB15F0898EEA4CC4AE9C18A89F7166B6"
             {
-            "Name" = "8:DTI PDF Template Tool"
+            "Name" = "8:PDF Template Tool"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"

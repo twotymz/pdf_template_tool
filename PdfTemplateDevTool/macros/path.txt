@@ -1,0 +1,2 @@
+
+path (?<headliner>[_\-\w\s\d()]+)\\(?<venue>[_\-\w\s\d()]+)\\(?<date>[\w\s]+)\\(?<time>[_\-\w\s\d]+)\\[_\-\w\s\d()]+\.pdf$

@@ -44,6 +44,8 @@
             this.buttonRunTemplate = new System.Windows.Forms.Button();
             this.richTextBoxEditor = new System.Windows.Forms.RichTextBox();
             this.contextMenuStripEditor = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.macrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.cutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -207,38 +209,51 @@
             // contextMenuStripEditor
             // 
             this.contextMenuStripEditor.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.macrosToolStripMenuItem,
+            this.toolStripSeparator3,
             this.cutToolStripMenuItem,
             this.copyToolStripMenuItem,
             this.pasteToolStripMenuItem,
             this.deleteToolStripMenuItem});
             this.contextMenuStripEditor.Name = "contextMenuStripEditor";
-            this.contextMenuStripEditor.Size = new System.Drawing.Size(108, 92);
+            this.contextMenuStripEditor.Size = new System.Drawing.Size(114, 120);
+            // 
+            // macrosToolStripMenuItem
+            // 
+            this.macrosToolStripMenuItem.Name = "macrosToolStripMenuItem";
+            this.macrosToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.macrosToolStripMenuItem.Text = "Macros";
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(110, 6);
             // 
             // cutToolStripMenuItem
             // 
             this.cutToolStripMenuItem.Name = "cutToolStripMenuItem";
-            this.cutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.cutToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.cutToolStripMenuItem.Text = "Cut";
             this.cutToolStripMenuItem.Click += new System.EventHandler(this.cutToolStripMenuItem_Click);
             // 
             // copyToolStripMenuItem
             // 
             this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
-            this.copyToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.copyToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.copyToolStripMenuItem.Text = "Copy";
             this.copyToolStripMenuItem.Click += new System.EventHandler(this.copyToolStripMenuItem_Click);
             // 
             // pasteToolStripMenuItem
             // 
             this.pasteToolStripMenuItem.Name = "pasteToolStripMenuItem";
-            this.pasteToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.pasteToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.pasteToolStripMenuItem.Text = "Paste";
             this.pasteToolStripMenuItem.Click += new System.EventHandler(this.pasteToolStripMenuItem_Click);
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
@@ -249,7 +264,7 @@
             this.groupBox3.Controls.Add(this.richTextBoxResults);
             this.groupBox3.Location = new System.Drawing.Point(6, 567);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(666, 185);
+            this.groupBox3.Size = new System.Drawing.Size(669, 185);
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Results";
@@ -263,7 +278,7 @@
             this.richTextBoxResults.Location = new System.Drawing.Point(7, 20);
             this.richTextBoxResults.Name = "richTextBoxResults";
             this.richTextBoxResults.ReadOnly = true;
-            this.richTextBoxResults.Size = new System.Drawing.Size(653, 159);
+            this.richTextBoxResults.Size = new System.Drawing.Size(656, 159);
             this.richTextBoxResults.TabIndex = 0;
             this.richTextBoxResults.Text = "";
             this.richTextBoxResults.WordWrap = false;
@@ -522,6 +537,8 @@
         private System.Windows.Forms.ToolStripMenuItem pasteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
         private System.Windows.Forms.Label labelBitmapPosition;
+        private System.Windows.Forms.ToolStripMenuItem macrosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
     }
 }
 
