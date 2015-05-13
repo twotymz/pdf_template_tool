@@ -98,9 +98,9 @@ namespace PdfTemplateTool
             {
                 Template template = new Template();
                 template.SetText(richTextBoxEditor.Text);
-                Result result = processor.ProcessPDF(textBoxPath.Text, template);
+                List<Result> results = processor.ProcessPDF(textBoxPath.Text, template);
 
-                var json = JsonConvert.SerializeObject(result, Formatting.Indented, new JsonConverter[] { new StringEnumConverter() });
+                var json = JsonConvert.SerializeObject(results, Formatting.Indented, new JsonConverter[] { new StringEnumConverter() });
                 richTextBoxResults.Text = json;
 
                 if (processor.Text != null)
@@ -184,8 +184,16 @@ namespace PdfTemplateTool
         private void loadMacros ()
         {
             string macroPath = Path.Combine(Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location), "macros");
-            string[] files = Directory.GetFiles(macroPath);
-
+            string[] files;
+            try
+            {
+                files = Directory.GetFiles(macroPath);
+            }
+            catch (Exception)
+            {
+                return;
+            }
+            
             Array.Sort<string>(files);
 
             foreach (string file in files)

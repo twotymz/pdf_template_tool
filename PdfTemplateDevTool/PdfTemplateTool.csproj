@@ -130,14 +130,14 @@
     <None Include="Resources\SyntaxHelp.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\PdfTemplateLib\PdfTemplateLib\PdfTemplateLib.csproj">
+    <Content Include="macros\axs barcode.txt" />
+    <Content Include="macros\path.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\pdf_template_lib\PdfTemplateLib\PdfTemplateLib.csproj">
       <Project>{8fca3772-9a7f-4139-b2e5-62413e1d1052}</Project>
       <Name>PdfTemplateLib</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="macros\axs barcode.txt" />
-    <Content Include="macros\path.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
